@@ -1,0 +1,9 @@
+.title-bar__products {
+	height: 3px;
+	width: 28px;
+	background: linear-gradient(
+		90deg,
+		rgba(33, 143, 63, 1) 0%,
+		rgba(58, 255, 64, 1) 100%
+	);
+}

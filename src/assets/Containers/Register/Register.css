@@ -1,0 +1,9 @@
+.form-width {
+	max-width: 500px;
+	padding-inline: 15px;
+}
+
+.form-bg {
+	background-color: #f3f4f7;
+	background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+}
