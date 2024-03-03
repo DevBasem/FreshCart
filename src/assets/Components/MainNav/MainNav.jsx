@@ -31,8 +31,7 @@ import "./MainNav.css";
 export function MainNav() {
 	const navigate = useNavigate();
 	const cartCount = useSelector((state) => state.cart);
-	const wishlistCount = useSelector((state) => state.wishlist);
-	console.log("wishlistCount in MainNav:", wishlistCount);
+	const { wishlistCount } = useSelector((state) => state.wishlist);
 	const dispatch = useDispatch();
 
 	// Function to handle Cart navgiation
@@ -51,6 +50,7 @@ export function MainNav() {
 	const signOut = () => {
 		// Clear user authentication state
 		localStorage.removeItem("isLoggedIn");
+		localStorage.removeItem("wishlistIds");
 		Cookies.remove("loginToken");
 		Cookies.remove("rememberMe");
 

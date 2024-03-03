@@ -103,7 +103,7 @@ export default function Login() {
 	}
 
 	return (
-		<div className="form-width mx-auto">
+		<div className="form-width h-[90vh] flex flex-col justify-center mx-auto">
 			<div className="flex justify-center pb-4">
 				<img className="h-10" src={FreshCartLogo} alt="logo" />
 			</div>

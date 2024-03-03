@@ -22,18 +22,18 @@ export default function Footer() {
 							<ul className="text-gray-500 dark:text-gray-400 font-medium">
 								<li className="mb-4">
 									<a
-										href="https://flowbite.com/"
+										href="https://Facebook.com/"
 										className="hover:underline"
 									>
-										Flowbite
+										Facebook
 									</a>
 								</li>
 								<li>
 									<a
-										href="https://tailwindcss.com/"
+										href="https://Youtube.com/"
 										className="hover:underline"
 									>
-										Tailwind CSS
+										Youtube
 									</a>
 								</li>
 							</ul>

@@ -7,9 +7,9 @@ import {
 	Spacer,
 } from "@nextui-org/react";
 import { Image as NextUIImage } from "@nextui-org/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToUserCartAsync } from "../../Store/cartSlice";
 import { addToUserWishListAsync } from "../../Store/wishlistSlice";
 import { FaStar } from "react-icons/fa6";
@@ -28,6 +28,8 @@ export default function Product({
 	const dispatch = useDispatch();
 	const [addCartLoading, setaddCartLoading] = useState(false);
 	const [addWishlistLoading, setaddWishlistLoading] = useState(false);
+	const [isInWishlist, setIsInWishlist] = useState(false);
+	const { loading } = useSelector((state) => state.wishlist);
 
 	const truncateTitle = (title, numWords) => {
 		const words = title.split(" ");
@@ -56,11 +58,22 @@ export default function Product({
 		try {
 			// Dispatch the addToUserWishlistAsync action
 			await dispatch(addToUserWishListAsync(ProductId));
+			setIsInWishlist(true);
 		} finally {
 			// Set loading to false regardless of success or failure
 			setaddWishlistLoading(false);
 		}
 	};
+
+	// Check if the product is in the wishlist
+	useEffect(() => {
+		if (!loading) {
+			console.log(loading);
+			const wishlistIds =
+				JSON.parse(localStorage.getItem("wishlistIds")) || [];
+			setIsInWishlist(wishlistIds.includes(ProductId));
+		}
+	}, [ProductId, loading]);
 
 	return (
 		<>
@@ -115,6 +128,7 @@ export default function Product({
 						onClick={() => handleAddToWishlist(ProductId)}
 						isLoading={addWishlistLoading}
 						isIconOnly
+						color={isInWishlist ? "danger" : "default"}
 					>
 						<FaHeart />
 					</Button>
