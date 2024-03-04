@@ -7,6 +7,7 @@ import ProtectedRoute from "./assets/Containers/ProtectedRoute/ProtectedRoute.js
 import MainLayout from "./assets/Layouts/MainLayout/MainLayout.jsx";
 import HomeLayout from "./assets/Layouts/HomeLayout/HomeLayout.jsx";
 import CartLayout from "./assets/Layouts/CartLayout/CartLayout.jsx";
+import WishlistLayout from "./assets/Layouts/WishlistLayout/WishlistLayout.jsx";
 import ProductsLayout from "./assets/Layouts/ProductsLayout/ProductsLayout.jsx";
 import CategoriesLayout from "./assets/Layouts/CategoriesLayout/CategoriesLayout.jsx";
 import BrandsLayout from "./assets/Layouts/BrandsLayout/BrandsLayout.jsx";
@@ -40,6 +41,7 @@ function App() {
 						<Route index={true} element={<HomeLayout />} />
 						<Route path="Home" element={<HomeLayout />} />
 						<Route path="Cart" element={<CartLayout />} />
+						<Route path="Wishlist" element={<WishlistLayout />} />
 						<Route path="Products" element={<ProductsLayout />} />
 						<Route
 							path="Categories"

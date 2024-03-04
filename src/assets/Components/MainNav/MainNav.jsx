@@ -115,7 +115,7 @@ export function MainNav() {
 			maxWidth="full"
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			shouldHideOnScroll="true"
+			// shouldHideOnScroll="true"
 		>
 			<NavbarContent justify={justifyContent}>
 				<NavbarBrand>

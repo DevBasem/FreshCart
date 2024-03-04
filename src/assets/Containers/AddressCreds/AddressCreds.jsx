@@ -52,7 +52,7 @@ export default function AddressCreds() {
 	});
 
 	return (
-		<div className="form-width mx-auto">
+		<div className="form-width mx-auto min-h-[80vh] flex flex-col justify-center">
 			<form
 				onSubmit={AddressData.handleSubmit}
 				className="flex flex-col gap-4 px-4 pb-8 pt-4 form-bg shadow-lg rounded-md"
