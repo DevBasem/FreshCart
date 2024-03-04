@@ -11,7 +11,7 @@ import slide3 from "../../Images/HeroSlider-images/slide3.jpeg";
 export function HeroSlider() {
 	let settings = {
 		adaptiveHeight: false,
-		dots: true,
+		dots: false,
 		infinite: true,
 		speed: 400,
 		slidesToShow: 1,
